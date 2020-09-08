@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wapper{
+            width: 200px;
+            height:200px;
+            background-color: pink;
+            overflow: auto;
+            position: relative;
+        }
+        .box{           
+            display: flex;
+            flex-direction: column-reverse;
+            /* position: absolute;
+            left: 0;
+            bottom:0; */
+        }
+        .box-son{
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="box">
+            <div class="box-son">1</div>
+            <div class="box-son">2</div>
+            <div class="box-son">3</div>
+            <div class="box-son">4</div>
+            <div class="box-son">5</div>
+            <div class="box-son">6</div>
+            <div class="box-son">7</div>
+            <div class="box-son">8</div>
+            <div class="box-son">9</div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let wapper = document.querySelector('.wapper')
+    let box = document.querySelector('.box')
+    console.log(wapper)
+
+    wapper.onscroll = function(e){
+        console.log(wapper.scrollTop)
+        console.log(wapper.scrollTop,wapper.offsetHeight,box.offsetHeight)
+        if(wapper.scrollTop === 0){
+            wapper.scrollTop = 40;
+            
+        }
+    }
+
+    let obj={
+        'a':1,
+        'b':3
+    }
+    console.log('a' in obj)
+    //判断对象中是否含有某些属性
+
+    let res = Reflect.has(obj,'b')
+    console.log(res)
+
+   console.log(Object.defineProperty(obj,'c',{})) 
+    //返回新对象
+    console.log(Reflect.defineProperty(obj,'c',{})) 
+</script>
