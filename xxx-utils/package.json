@@ -1,0 +1,20 @@
+{
+  "name": "xxx-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "xxx": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "xx-vue-create": "^1.0.0"
+  }
+}
